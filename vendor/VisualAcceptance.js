@@ -156,9 +156,9 @@ function _capture (imageName, options) {
     // default mocha window size
     browserDirectory += 'default/'
   }
-  // resemble.outputSettings({
-  //   largeImageThreshold: 0
-  // })
+  resemble.outputSettings({
+    useCrossOrigin: false
+  })
   resolvePositionFixed()
   if (window.callPhantom !== undefined) {
     return capturePhantom(imageName, options.width, options.height,
